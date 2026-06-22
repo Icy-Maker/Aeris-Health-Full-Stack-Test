@@ -106,10 +106,6 @@
 -1
 ```
 
-## 运行环境
-- Python 3.x 版本（无需额外第三方依赖）
-- 兼容Windows、Linux、macOS系统
-
 ## 任务C（Xero API 简答题）
 使用任意 Markdown 阅读器或文本编辑器打开 task_shtu，即可查看 5 道 API 场景题的完整解答。
 
