@@ -137,10 +137,10 @@
 ## 文件结构
 
 ```bash
-frontend/
+task_D/
 ├── index.html          # 页面入口
 ├── css/
-│   └── style.css       # 样式文件（绿色极简主题）
+│   └── style.css       # 样式文件
 ├── js/
 │   ├── api.js          # Mock API 层：商品数据、购物车逻辑、库存校验
 │   ├── state.js        # 状态管理：页面状态机、SKU匹配、数量边界
@@ -169,7 +169,7 @@ frontend/
 
 1. 安装 [VS Code](https://code.visualstudio.com/)
 2. 安装 Live Server 插件（Extensions 搜索 "Live Server" → Install）
-3. 用 VS Code 打开 `frontend` 文件夹
+3. 用 VS Code 打开 `task_D` 文件夹
 4. 右键 `index.html` → **Open with Live Server**
 5. 浏览器自动打开 `http://127.0.0.1:5500/`，即可交互
 
@@ -185,7 +185,7 @@ frontend/
 
 **步骤：**
 
-1. 进入 `frontend` 文件夹
+1. 进入 `task_D` 文件夹
 2. 双击 `index.html` 用系统默认浏览器打开
 3. 基础展示功能可用，但以下特性可能异常：
    - ES Module 模块化加载（若浏览器不支持）
@@ -221,7 +221,7 @@ frontend/
 
 ## 图片资源
 
-商品图片存储于 `frontend/images/` 目录，随仓库一起提交。访问者克隆仓库后图片自动下载，无需额外操作。
+商品图片存储于 `task_D/images/` 目录，随仓库一起提交。访问者克隆仓库后图片自动下载，无需额外操作。
 
 图片为本地静态资源，确保离线环境可正常运行。
 
