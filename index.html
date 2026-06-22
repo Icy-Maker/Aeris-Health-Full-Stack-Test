@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品详情</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header class="header">
+        <div class="header-inner">
+            <div class="logo">STORE</div>
+            <div class="cart">
+                <span class="cart-icon">🛒</span>
+                <span class="cart-count" id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主内容区 -->
+    <main class="main">
+        <!-- 加载状态 -->
+        <div id="loading-state" class="state-panel">
+            <div class="spinner"></div>
+            <p>正在加载商品信息...</p>
+        </div>
+
+        <!-- API 错误状态 -->
+        <div id="error-state" class="state-panel hidden">
+            <p class="error-text" id="error-text">加载失败，请稍后重试</p>
+            <button class="btn btn-secondary" id="retry-btn">重新加载</button>
+        </div>
+
+        <!-- 商品详情内容 -->
+        <div id="product-content" class="product-container hidden">
+            <!-- 左侧：图片区 + 左右切换 -->
+            <div class="product-gallery">
+                <button class="gallery-nav gallery-prev" id="prev-btn">‹</button>
+                <div class="main-image-wrapper">
+                    <img id="product-image" src="" alt="商品图片">
+                </div>
+                <button class="gallery-nav gallery-next" id="next-btn">›</button>
+                <div class="product-indicator" id="product-indicator">1 / 4</div>
+            </div>
+
+            <!-- 右侧：信息区 -->
+            <div class="product-info">
+                <h1 id="product-name" class="product-name"></h1>
+                <p id="product-description" class="product-description"></p>
+
+                <!-- 价格与库存 -->
+                <div class="price-stock-row">
+                    <span class="currency">$</span>
+                    <span id="product-price" class="price"></span>
+                    <span id="stock-status" class="stock-status"></span>
+                </div>
+
+                <!-- 变体选择区 -->
+                <div class="variant-section" id="variant-section"></div>
+
+                <!-- 数量控制 -->
+                <div class="quantity-section">
+                    <label class="variant-label">数量</label>
+                    <div class="quantity-control">
+                        <button class="qty-btn" id="qty-minus" disabled>-</button>
+                        <span class="qty-value" id="qty-value">1</span>
+                        <button class="qty-btn" id="qty-plus">+</button>
+                    </div>
+                </div>
+
+                <!-- 操作按钮 -->
+                <div class="action-section">
+                    <button class="btn btn-primary" id="add-to-cart-btn">加入购物车</button>
+                    <p id="add-feedback" class="feedback hidden"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/state.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
